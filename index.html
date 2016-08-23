@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>手机端轮播图</title>
+    <style>
+        html,
+        body,
+        div,
+        ul,
+        li,
+        a,
+        img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-size: 20px;
+        }
+
+        .ue-slider {
+            position: relative;
+            width: 100%;
+            height: 10rem;
+            overflow: hidden;
+            background-color: #ccc;
+        }
+
+        .ue-slider-content {
+            height: 100%;
+            display: -webkit-box;
+            display: box;
+            overflow: hidden;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .ue-slider-body {
+            position: absolute;
+            height: 100%;
+            display: box;
+            display: -webkit-box;
+            text-align: center;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            overflow: hidden;
+        }
+
+        .ue-slider-body a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .ue-slider-body img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ue-slider-indicator {
+            width: 100%;
+            left: 0;
+            bottom: 10px;
+            position: absolute;
+            text-align: center;
+            -webkit-transition: 300ms;
+            transition: 300ms;
+            z-index: 10;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .ue-slider-indicator span {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #fff;
+            opacity: .5;
+            margin: 0 3px;
+        }
+
+        .ue-slider-indicator span.ue-active {
+            opacity: 1;
+            background: #007AFF;
+        }
+    </style>
+</head>
+<body>
+<!-- 轮播图 -->
+<div class="ue-slider">
+    <ul class="ue-slider-content">
+        <li class="ue-slider-body">
+            <a href="javascript:;">
+                <img src="http://img.modouyu.net/201608/18/other/1471503673.jpg@0r_900w_502h_1e_1c_1pr.jpg"/>
+            </a>
+        </li>
+        <li class="ue-slider-body">
+            <a href="javascript:;">
+                <img src="http://img.modouyu.net/201607/01/other/1467336962.jpg@0r_900w_502h_1e_1c_1pr.jpg"/>
+            </a>
+        </li>
+        <li class="ue-slider-body">
+            <a href="javascript:;">
+                <img src="http://img.modouyu.net/201607/01/other/1467337012.jpg@0r_900w_502h_1e_1c_1pr.jpg"/>
+            </a>
+        </li>
+        <li class="ue-slider-body">
+            <a href="javascript:;">
+                <img src="http://img.modouyu.net/201607/01/other/1467337012.jpg@0r_900w_502h_1e_1c_1pr.jpg"/>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 轮播图 -->
+</body>
+<script src="./src/slider-2.0.min.js"></script>
+<script>
+    var slider = new Slider({
+        el: '.ue-slider',
+        autoTime: 4000
+    });
+
+</script>
+</html>
